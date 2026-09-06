@@ -150,7 +150,7 @@
     <br>
     <h3>Respostas para as questões:</h3>
     <p>1. Sim, o CSS foi carregado corretamente.</p>
-    <p>2. Ao mudar --cor-primaria, a cor do botão de envio e do texto "Formulário" mudou de azul para verde escuro, porque ambos usam var(--cor-primaria) em vez de um valor fixo — mudando a variável, todos os usos são atualizados de uma vez.</p>
+    <p>2. Ao mudar --cor-primaria, a cor do botão de envio mudou de azul para verde escuro.</p>
     <p>3. Após remover o link da fonte Roboto, o navegador usou a próxima fonte da lista declarada em font-family (no CSS), devido ao fato que Roboto não pôde ser baixada.</p>
 </section>
 
