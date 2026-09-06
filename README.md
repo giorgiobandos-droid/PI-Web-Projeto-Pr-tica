@@ -1,161 +1,292 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+/* RESET */
+* {
+    box-sizing: border-box;
+}
 
-<head>
-    <meta charset="UTF-8">
+/* VARIÁVEIS */
+:root {
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1"
-    >
+    --cor-primaria: #14532d;
 
-    <title>Introdução ao CSS</title>
+    --cor-escuro: #0b2239;
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-        rel="stylesheet"
-    > 
-   
+    --cor-fundo: #f5f7fb;
 
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
-</head>
+    --cor-borda: #e3e6ee;
 
-<body>
+    --cor-erro: #b42318;
 
-    <header class="topbar">
+    --cor-sucesso: #1f7c1f;
 
-        <h1 id="titulo">
-            Cadastro Acadêmico
-        </h1>
-
-        <p class="sub">
-            Vamos aplicar CSS: seletores, cores, fontes e estilos básicos.
-        </p>
-
-    </header>
-
-    <main class="container">
-
-        <section class="card">
-
-            <h2 class="destaque">
-                Formulário
-            </h2>
-
-            <form action="#sucesso" method="post">
-
-                <fieldset>
-
-                    <legend>
-                        Dados do Aluno
-                    </legend>
-
-                    <label for="nome">
-                        Nome:
-                    </label>
-
-                    <input
-                        type="text"
-                        id="nome"
-                        name="nome"
-                        required
-                    >
-
-                    <label for="email">
-                        E-mail:
-                    </label>
-
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="exemplo@email.com"
-                    >
-
-                    <label for="msg">
-                        Mensagem:
-                    </label>
-
-                    <textarea
-                        id="msg"
-                        name="mensagem"
-                        rows="4"
-                    ></textarea>
-
-                    <div class="acoes">
-
-                        <button type="submit">
-                            Enviar
-                        </button>
-
-                        <button
-                            type="reset"
-                            class="secundario"
-                        >
-                            Limpar
-  
-                        </button>
+}
 
 
-                    </div>
+/* TIPOGRAFIA GLOBAL */
 
-                </fieldset>
+html,
+body {
 
-            </form>
+    margin: 0;
 
-            <div
-                class="alerta"
-                role="alert"
-            >
-                Exemplo de alerta: verifique os campos obrigatórios.
-            </div>
+    padding: 0;
 
+    font-family:
+        'Roboto',
+        system-ui,
+        -apple-system,
+        Segoe UI,
+        Helvetica,
+        Arial,
+        sans-serif;
 
-            
-        
-            
-        <div
-            
-        id = "sucesso"     
-        class="sucesso"
-        role="alert"
-                  >
-                 Cadastro realizado com sucesso!
-        </div>
-  
+    color: var(--cor-escuro);
 
-        </section>
+    background: var(--cor-fundo);
 
-    </main>
-
-    <footer class="rodape">
-
-        <small>
-            Laboratório 03 - Introdução ao CSS
-        </small>
-
-    </footer>
+    line-height: 1.5;
+}
 
 
-<section>
-    <h3>Grupo: Meio-Devs</h3>
-    <h3>Integrantes:</h3>
-    <p>Diego Batista Luglio | RA:260106808</p>
-    <p>Giorgio Cavalcanti Bandos | RA:26010468</p>
-    <p>Mauricio Cunha Tamayo | RA:26006517</p>
-    <p>Tarsilla Helena Neves Pap | RA:26026449</p>
-    <br>
-    <h3>Respostas para as questões:</h3>
-    <p>1. Sim, o CSS foi carregado corretamente.</p>
-    <p>2. Ao mudar --cor-primaria, a cor do botão de envio mudou de azul para verde escuro.</p>
-    <p>3. Após remover o link da fonte Roboto, o navegador usou a próxima fonte da lista declarada em font-family (no CSS), devido ao fato que Roboto não pôde ser baixada.</p>
-</section>
+/* CABEÇALHO */
 
-</body>
+.topbar {
 
+    padding: 24px 16px;
+
+    text-align: center;
+
+    background: #fff;
+
+    border-bottom:
+        1px solid
+        var(--cor-borda);
+}
 
 
-</html>
+#titulo {
+
+    margin: 0;
+
+    font-size: 1.8rem;
+}
+
+
+.sub {
+
+    margin: 8px 0 0;
+
+    opacity: 0.85;
+}
+
+
+/* CONTAINER */
+
+.container {
+
+    width: min(100% - 32px, 960px);
+
+    margin: 24px auto;
+}
+
+
+/* CARD */
+
+.card {
+
+    background: #fff;
+
+    border:
+        1px solid
+        var(--cor-borda);
+
+    border-radius: 12px;
+
+    padding: 20px;
+
+    box-shadow:
+        0 6px 18px
+        rgba(0, 0, 0, 0.04);
+}
+
+
+.destaque {
+
+    color:
+        hsl(140, 85%, 27%);
+}
+
+
+/* FORMULÁRIO */
+
+form fieldset {
+
+    border:
+        1px solid
+        var(--cor-borda);
+
+    border-radius: 10px;
+
+    padding: 16px;
+
+    margin: 0 0 16px;
+}
+
+
+legend {
+
+    font-weight: 700;
+
+    padding: 0 6px;
+}
+
+
+label {
+
+    display: block;
+
+    margin: 10px 0 6px;
+}
+
+
+input,
+select,
+textarea {
+
+    width: 100%;
+
+    padding: 10px 12px;
+
+    border:
+        1px solid
+        var(--cor-borda);
+
+    border-radius: 8px;
+
+    background: #fff;
+
+    font: inherit;
+}
+
+
+/* FOCO ACESSÍVEL */
+
+input:focus,
+select:focus,
+textarea:focus {
+
+    outline:
+        3px solid
+        rgba(10, 102, 194, 0.2);
+
+    border-color:
+        var(--cor-primaria);
+}
+
+
+/* ÁREA DOS BOTÕES */
+
+.acoes {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 10px;
+}
+
+
+/* BOTÕES */
+
+button {
+
+    cursor: pointer;
+
+    border: none;
+
+    padding: 10px 18px;
+
+    border-radius: 8px;
+
+    font-weight: 700;
+
+    background:
+        var(--cor-primaria);
+
+    color: #fff;
+}
+
+
+button:hover {
+
+    filter:
+        brightness(0.95);
+}
+
+
+button.secundario {
+
+    background: #eef2f7;
+
+    color: #1f2a37;
+}
+
+
+/* ALERTA */
+
+.alerta {
+
+    margin-top: 8px;
+
+    padding: 12px 14px;
+
+    border-radius: 10px;
+
+    border:
+        1px solid #f1c4c1;
+
+    background: #fdecec;
+
+    color: var(--cor-erro);
+}
+
+/* SUCESSO */
+.sucesso {
+
+    display: none;
+
+    margin-top: 8px;
+
+    padding: 12px 14px;
+
+    border-radius: 10px;
+
+    border:
+        1px solid #125827;
+
+    background: #d7ffbc;
+
+    color: var(--cor-sucesso);
+
+}
+
+.sucesso:target{
+
+    display: block;
+}
+
+input:hover,
+textarea:hover {
+    border-color: #000000;
+}
+
+/* RODAPÉ */
+
+.rodape {
+
+    text-align: center;
+
+    padding: 18px 12px;
+
+    color: #6b7280;
+}
+
