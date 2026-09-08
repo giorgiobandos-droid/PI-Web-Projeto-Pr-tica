@@ -143,7 +143,7 @@
 <section>
     <h3>Grupo: Meio-Devs</h3>
     <h3>Integrantes:</h3>
-    <p>Diego Batista Luglio | RA:260106808</p>
+    <p>Diego Batista Luglio | RA:26010680</p>
     <p>Giorgio Cavalcanti Bandos | RA:26010468</p>
     <p>Mauricio Cunha Tamayo | RA:26006517</p>
     <p>Tarsilla Helena Neves Pap | RA:26026449</p>
