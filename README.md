@@ -154,6 +154,22 @@
     <p>3. Após remover o link da fonte Roboto, o navegador usou a próxima fonte da lista declarada em font-family (no CSS), devido ao fato que Roboto não pôde ser baixada.</p>
 </section>
 
+<section id="referências">
+    <h2>Referências</h2>
+
+    <ol>
+        <li>
+            SILVEIRA, Fernando Luiz de Almeida. Aula 09 – Desenvolvimento de Sistemas Web: Introdução CSS.
+            Material didático. Campinas: PUC-Campinas, 2026.
+        </li>
+
+        <li>
+            SILVEIRA, Fernando Luiz de Almeida. Aula 10 – Desenvolvimento de Sistemas Web: Layout CSS.
+            Material didático. Campinas: PUC-Campinas, 2026.
+        </li>
+    </ol>
+</section>
+
 </body>
 
 
