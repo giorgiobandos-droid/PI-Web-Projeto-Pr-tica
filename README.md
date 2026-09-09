@@ -1,4 +1,4 @@
-# PI-Web-Projeto-Pr-tica
+# PI-Web-Projeto-Prática
 
 #Integrantes:
 Diego Batista Luglio | RA:26010680
