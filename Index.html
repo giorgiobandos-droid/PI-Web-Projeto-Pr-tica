@@ -1,78 +1,191 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-    <meta charset="UTF-8">
-    <title>Broker del Puerto - Seguradora de Automóveis</title>
-   
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-        rel="stylesheet"
-    > 
-   
-
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard SegurAuto — Vendas de Seguros de Automóvel</title>
+  <meta name="description" content="Dashboard responsivo para acompanhamento de vendas de seguros de automóvel: apólices, clientes, sinistros e desempenho de corretores.">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
-
-
 <body>
 
-    <topbar class="topbar">
-        <h1 id="título">
-            Bróker del Puerto 
-            <p class="sub">La seguradora preferida del Plata</p>
-        </h1>
 
-        <nav class="navbar">
+  <header class="navbar">
+    <div class="logo">🚗 <strong>SegurAuto</strong></div>
+    <nav class="menu" aria-label="Menu principal">
+      <a href="#dashboard">Dashboard</a>
+      <a href="#apolices">Apólices</a>
+      <a href="#clientes">Clientes</a>
+      <a href="#sinistros">Sinistros</a>
+      <a href="#relatorios">Relatórios</a>
+    </nav>
+  </header>
 
-            <ul>
-                <li><a href="">Página Principal</a></li>
-                 <li><a href="">Serviços</a></li>
-                 
-            </ul>
-        </nav>
+  <div class="dashboard">
 
-        
-        <nav class="sidebar">
+    <aside class="sidebar">
+      <nav aria-label="Menu lateral">
+        <ul>
+          <li><a href="#dashboard" class="ativo">Visão Geral</a></li>
+          <li><a href="#apolices">Apólices</a></li>
+          <li><a href="#clientes">Clientes</a></li>
+          <li><a href="#sinistros">Sinistros</a></li>
+          <li><a href="#corretores">Corretores</a></li>
+          <li><a href="#financeiro">Financeiro</a></li>
+          <li><a href="#relatorios">Relatórios</a></li>
+          <li><a href="#config">Configurações</a></li>
+        </ul>
+      </nav>
+    </aside>
 
-            <ul>
-                 <li><a href="">Por que escolher a Bróker?</a></li>
-                  <li><a href="">Ajuda</a></li>
-                   <li><a href="">Contatos</a></li>
-            
-            </ul>
-        </nav>
-        
+    <main class="content" id="dashboard">
+      <h1>Dashboard de Vendas — Seguros de Automóvel</h1>
+      <p class="subtitulo">Resumo do desempenho comercial da corretora no mês atual.</p>
 
-    </topbar>
+      <section class="kpis" aria-label="Indicadores principais">
+        <div class="kpi">
+          <span class="kpi-icone" aria-hidden="true">📄</span>
+          <div>
+            <p class="kpi-valor">482</p>
+            <p class="kpi-label">Apólices Ativas</p>
+          </div>
+        </div>
+        <div class="kpi">
+          <span class="kpi-icone" aria-hidden="true">💰</span>
+          <div>
+            <p class="kpi-valor">R$ 187.400</p>
+            <p class="kpi-label">Prêmio Total do Mês</p>
+          </div>
+        </div>
+        <div class="kpi">
+          <span class="kpi-icone" aria-hidden="true">🙋</span>
+          <div>
+            <p class="kpi-valor">63</p>
+            <p class="kpi-label">Novos Clientes</p>
+          </div>
+        </div>
+        <div class="kpi">
+          <span class="kpi-icone" aria-hidden="true">⚠️</span>
+          <div>
+            <p class="kpi-valor">14</p>
+            <p class="kpi-label">Sinistros Abertos</p>
+          </div>
+        </div>
+        <div class="kpi">
+          <span class="kpi-icone" aria-hidden="true">🔄</span>
+          <div>
+            <p class="kpi-valor">91%</p>
+            <p class="kpi-label">Taxa de Renovação</p>
+          </div>
+        </div>
+        <div class="kpi">
+          <span class="kpi-icone" aria-hidden="true">🎯</span>
+          <div>
+            <p class="kpi-valor">R$ 1.240</p>
+            <p class="kpi-label">Ticket Médio</p>
+          </div>
+        </div>
+      </section>
 
+      <h2 class="titulo-secao" id="apolices">Vendas por Tipo de Cobertura</h2>
+      <section class="cards" aria-label="Tipos de cobertura vendidos">
+        <article class="card">
+          <h3>Cobertura Compreensiva</h3>
+          <p>Proteção completa contra colisão, roubo, furto e incêndio.</p>
+          <p class="card-destaque">182 apólices vendidas</p>
+        </article>
+        <article class="card">
+          <h3>Responsabilidade Civil (RCF)</h3>
+          <p>Cobertura obrigatória para danos causados a terceiros.</p>
+          <p class="card-destaque">210 apólices vendidas</p>
+        </article>
+        <article class="card">
+          <h3>Roubo e Furto</h3>
+          <p>Indenização em caso de roubo ou furto do veículo segurado.</p>
+          <p class="card-destaque">56 apólices vendidas</p>
+        </article>
+        <article class="card">
+          <h3>Vidros e Faróis</h3>
+          <p>Cobertura complementar para reparo de vidros e faróis.</p>
+          <p class="card-destaque">34 apólices vendidas</p>
+        </article>
+      </section>
 
-    <main class="container">
-        
-
+      <h2 class="titulo-secao" id="clientes">Apólices Recentes</h2>
+      <div class="tabela-wrap" tabindex="0" role="region" aria-label="Tabela de apólices recentes, role role permite rolagem horizontal">
+        <table>
+          <caption>Últimas apólices de seguro de automóvel emitidas</caption>
+          <thead>
+            <tr>
+              <th scope="col">Nº Apólice</th>
+              <th scope="col">Cliente</th>
+              <th scope="col">Veículo</th>
+              <th scope="col">Cobertura</th>
+              <th scope="col">Prêmio Mensal</th>
+              <th scope="col">Status</th>
+              <th scope="col">Vencimento</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>AP-10234</td>
+              <td>Marina Souza</td>
+              <td>Honda Civic 2022</td>
+              <td>Compreensiva</td>
+              <td>R$ 320,00</td>
+              <td><span class="status status-ativo">Ativa</span></td>
+              <td>15/03/2027</td>
+            </tr>
+            <tr>
+              <td>AP-10235</td>
+              <td>Carlos Bezerra</td>
+              <td>Fiat Argo 2021</td>
+              <td>RCF</td>
+              <td>R$ 145,00</td>
+              <td><span class="status status-pendente">Pendente</span></td>
+              <td>02/04/2027</td>
+            </tr>
+            <tr>
+              <td>AP-10236</td>
+              <td>Juliana Prado</td>
+              <td>Jeep Compass 2023</td>
+              <td>Compreensiva</td>
+              <td>R$ 410,00</td>
+              <td><span class="status status-ativo">Ativa</span></td>
+              <td>28/02/2027</td>
+            </tr>
+            <tr>
+              <td>AP-10237</td>
+              <td>Rafael Nogueira</td>
+              <td>Chevrolet Onix 2020</td>
+              <td>Roubo e Furto</td>
+              <td>R$ 98,00</td>
+              <td><span class="status status-cancelada">Cancelada</span></td>
+              <td>10/01/2027</td>
+            </tr>
+            <tr>
+              <td>AP-10238</td>
+              <td>Beatriz Lima</td>
+              <td>Toyota Corolla 2023</td>
+              <td>Compreensiva</td>
+              <td>R$ 380,00</td>
+              <td><span class="status status-ativo">Ativa</span></td>
+              <td>19/05/2027</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </main>
+
+    <footer class="footer">
+      <address>
+        SegurAuto Corretora de Seguros<br>
+        Contato: <a href="mailto:contato@seguroauto.com.br">contato@seguroauto.com.br</a>
+      </address>
+    </footer>
+
+  </div>
+
 </body>
-
-
-<footer>
-<section>
-    <h3>Grupo: Meio-Devs</h3>
-    <h3>Integrantes:</h3>
-    <p>Diego Batista Luglio | RA:26010680</p>
-    <p>Giorgio Cavalcanti Bandos | RA:26010468</p>
-    <p>Mauricio Cunha Tamayo | RA:26006517</p>
-    <p>Tarsilla Helena Neves Pap | RA:26026449</p>
-<abbr title="Maumau Monstrão 3 vezes">aura </abbr>
-</section>
-
-     <small>
-            Laboratório 04 - Layout CSS
-        </small>
-
-        
-</footer>
 </html>
