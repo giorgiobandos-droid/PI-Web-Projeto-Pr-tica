@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Área Restrita | Laboratório JWT</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Mensagem de status geral (acesso permitido, negado ou erro) -->
+  <div id="status-acesso" class="mensagem" role="status" aria-live="polite"></div>
+
+  <!-- ===== CONTEÚDO RESTRITO (exibido apenas com token válido na estrutura) ===== -->
+  <div id="conteudo-restrito" hidden>
+    <header class="topo">
+      <p>Usuário: <strong id="nome-usuario"></strong></p>
+      <button type="button" id="btn-logout">Sair</button>
+    </header>
+
+    <main class="container">
+      <h1 id="boas-vindas"></h1>
+      <p>Acesso permitido (simulado). Esta página só confirma que existe um token com Payload legível.</p>
+
+      <section aria-labelledby="titulo-claims">
+        <h2 id="titulo-claims">Informações do Payload (claims)</h2>
+        <dl id="lista-claims">
+          <dt>id</dt>
+          <dd id="claim-id"></dd>
+          <dt>name</dt>
+          <dd id="claim-name"></dd>
+          <dt>role</dt>
+          <dd id="claim-role"></dd>
+          <dt>iat (emitido em)</dt>
+          <dd id="claim-iat"></dd>
+          <dt>exp (expira em)</dt>
+          <dd id="claim-exp"></dd>
+        </dl>
+        <p id="status-expiracao" class="mensagem" role="status" aria-live="polite"></p>
+      </section>
+
+      <section aria-labelledby="titulo-estrutura">
+        <h2 id="titulo-estrutura">Estrutura do JWT</h2>
+
+        <h3>Header</h3>
+        <pre id="jwt-header"></pre>
+
+        <h3>Payload</h3>
+        <pre id="jwt-payload"></pre>
+
+        <h3>Signature</h3>
+        <pre id="jwt-signature"></pre>
+      </section>
+
+      <section aria-labelledby="titulo-limites">
+        <h2 id="titulo-limites">Limitações desta simulação</h2>
+        <ul>
+          <li>Base64URL é codificação, não criptografia.</li>
+          <li>Existir um token no localStorage não prova que ele é autêntico.</li>
+          <li>A assinatura só é verificada com a chave secreta (ex.: no jwt.io).</li>
+          <li>O Front-End não deve ser o único responsável pelo controle de acesso.</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <!-- ===== ACESSO NEGADO (token ausente, vazio ou malformado) ===== -->
+  <main id="acesso-negado" class="container" hidden>
+    <h1>Acesso negado</h1>
+    <p id="motivo-negado">Você não possui um token válido para acessar esta página.</p>
+    <p>Realize o login para continuar.</p>
+    <a href="index.html" id="link-voltar">Voltar para a página inicial</a>
+  </main>
+
+  <script src="area.js"></script>
+</body>
+</html>

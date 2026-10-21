@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Laboratório JWT</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Laboratório JWT</h1>
+      <p>Autenticação simulada (somente Front-End) para fins didáticos.</p>
+    </header>
+
+    <section aria-labelledby="titulo-login">
+      <h2 id="titulo-login">Entrar</h2>
+
+      <!-- novalidate: a validação é feita via JavaScript (login.js) -->
+      <form id="form-login" novalidate>
+        <div class="campo">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="seu@email.com" autocomplete="off">
+        </div>
+
+        <div class="campo">
+          <label for="senha">Senha</label>
+          <input type="password" id="senha" name="senha" placeholder="Digite sua senha" autocomplete="off">
+        </div>
+
+        <button type="submit" id="btn-entrar">Entrar</button>
+      </form>
+
+      <!-- Área de mensagens de validação (anunciada por leitores de tela) -->
+      <div id="mensagem" class="mensagem" role="status" aria-live="polite"></div>
+    </section>
+
+    <footer>
+      <p><small>Aviso: o token usado é demonstrativo e está expirado. Não representa uma credencial real.</small></p>
+    </footer>
+  </main>
+
+  <script src="login.js"></script>
+</body>
+</html>
